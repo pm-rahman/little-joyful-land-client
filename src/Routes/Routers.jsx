@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import NavMenu from "../Components/NavMenu/NavMenu";
+import Main from "../Layouts/Main/Main";
 
 const router = createBrowserRouter([
     {
         path:'/',
-        element:<NavMenu/>
+        element:<Main/>
     }
 ])
 
