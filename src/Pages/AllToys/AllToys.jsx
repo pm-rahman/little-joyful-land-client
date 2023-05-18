@@ -1,4 +1,9 @@
+import { useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
+
 const AllToys = () => {
+    const loadedToys = useLoaderData()
+    const [allToys, setAllToys] = useState(loadedToys);
     return (
         <div className="overflow-x-auto">
             <table className="table table-compact w-full">
@@ -14,15 +19,18 @@ const AllToys = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>1</th>
-                        <td>Cy Ganderton</td>
-                        <td>Quality Control Specialist</td>
-                        <td>Littel, Schaden and Vandervort</td>
-                        <td>Canada</td>
-                        <td>12/16/2020</td>
-                        <td>Blue</td>
+                    {allToys.map((toy, index) => <tr
+                        key={toy._id}
+                    >
+                        <th>{index}</th>
+                        <td>{toy.sellerName}</td>
+                        <td>{toy.toyName}</td>
+                        <td>{toy.subCategory}</td>
+                        <td>${toy.price}</td>
+                        <td>{toy.quantity}</td>
+                        <Link to={`/toy-details/${toy._id}`} className="btn my-2 bg-blue-500 hover:bg-blue-600 border-0">Details</Link>
                     </tr>
+                    )}
                 </tbody>
             </table>
         </div>

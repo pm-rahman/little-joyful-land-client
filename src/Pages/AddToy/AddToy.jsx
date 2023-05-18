@@ -3,14 +3,16 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import Title from "../../Components/Title/Title";
 import Swal from "sweetalert2";
+
 const AddToy = () => {
-    const { user } = useContext(AuthContext)
+
+    const { user } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
     Title('Add-Toy')
 
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/toys', {
+        fetch('http://localhost:5000/toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
