@@ -7,7 +7,7 @@ const HighlightProduct = () => {
                     <img className="rounded-md h-auto w-28" src="https://i.ibb.co/d0Rvw01/gallery-pic-3.jpg" alt="" />
                     <div className="text-xl">
                         <h4 className="font-bold">Name</h4>
-                        <p className="text-amber-600 font-semibold">price</p>
+                        <p className="text-blue-600 font-semibold">price</p>
                     </div>
                 </div>
             </div>
@@ -17,7 +17,7 @@ const HighlightProduct = () => {
                     <img className="rounded-md h-auto w-28" src="https://i.ibb.co/d0Rvw01/gallery-pic-3.jpg" alt="" />
                     <div className="text-xl">
                         <h4 className="font-bold">Name</h4>
-                        <p className="text-amber-600 font-semibold">price</p>
+                        <p className="text-blue-600 font-semibold">price</p>
                     </div>
                 </div>
             </div>

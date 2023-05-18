@@ -62,7 +62,7 @@ const Register = () => {
             : naviGate('/login')
     }
     return (
-        <div className="w-1/2 mx-auto bg-amber-50 p-14 pt-8 rounded-md">
+        <div className="w-1/2 mx-auto bg-blue-50 p-14 pt-8 rounded-md">
             <h4 className="text-3xl mb-3 font-bold">Register</h4>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 <div className="form-control">
@@ -100,8 +100,8 @@ const Register = () => {
 
                 {errors.exampleRequired && <span className="text-red-500">This field is required</span>}
                 <p className="font-semibold text-red-500">{error}</p>
-                <input type="submit" value="Register" className="btn btn-block border-none rounded-md bg-amber-600 hover:bg-amber-600" />
-                <p>I already have an account <Link onClick={loginButtonHandler} className="text-amber-600 font-semibold underline">Login</Link> </p>
+                <input type="submit" value="Register" className="btn btn-block border-none rounded-md bg-blue-600 hover:bg-blue-600" />
+                <p>I already have an account <Link onClick={loginButtonHandler} className="text-blue-600 font-semibold underline">Login</Link> </p>
             </form>
             <button onClick={googleUserHandler} className="mt-4 bg-blue-500 mx-auto rounded-md py-3 px-6 flex gap-1 items-center justify-center text-white"><span className="font-semibold text-md">Google</span><Icon className="text-sm" icon="fa-brands:google" /></button>
         </div>

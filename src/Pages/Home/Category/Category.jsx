@@ -20,7 +20,7 @@ const Category = () => {
                                 <div className="badge badge-secondary">Rating</div>
                             </h2>
                             <p>Price</p>
-                            <button className="btn bg-amber-600 hover:bg-amber-700 border-0">Buy Now</button>
+                            <button className="btn bg-blue-600 hover:bg-blue-700 border-0">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Category = () => {
                                 <div className="badge badge-secondary">Rating</div>
                             </h2>
                             <p>Price</p>
-                            <button className="btn bg-amber-600 hover:bg-amber-700 border-0">Buy Now</button>
+                            <button className="btn bg-blue-600 hover:bg-blue-700 border-0">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const Category = () => {
                                 <div className="badge badge-secondary">Rating</div>
                             </h2>
                             <p>Price</p>
-                            <button className="btn bg-amber-600 hover:bg-amber-700 border-0">Buy Now</button>
+                            <button className="btn bg-blue-600 hover:bg-blue-700 border-0">Buy Now</button>
                         </div>
                     </div>
                 </div>
