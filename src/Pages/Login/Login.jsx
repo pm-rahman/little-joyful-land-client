@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { Icon } from "@iconify/react";
@@ -9,6 +9,10 @@ const Login = () => {
     const [error, setError] = useState('')
     const { user, loginUser, loginWithGoogle } = useContext(AuthContext);
     Title('Login')
+    const location = useLocation()
+    const naviGate = useNavigate()
+
+    const from = location?.state?.from?.pathname || '/';
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
@@ -20,7 +24,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                naviGate('/')
+                naviGate(from)
             })
             .catch(err => {
                 setError(err.message)
@@ -33,14 +37,12 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                naviGate('/')
+                naviGate(from)
             })
             .catch(error => {
                 setError(error.message)
             })
     }
-
-    const naviGate = useNavigate()
     const registerButtonHandler = () => {
         user
             ? Swal.fire({
