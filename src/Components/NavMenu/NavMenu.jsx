@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
+import ActiveLink from "../ActiveLink/ActiveLink";
+import { Link } from "react-router-dom";
 const NavMenu = () => {
     const { user,logOut } = useContext(AuthContext)
     const logOutHandler = ()=>{
@@ -13,11 +14,11 @@ const NavMenu = () => {
 
 
     const navItems = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/all-toys'>All Toys</Link></li>
-        {user && <li><Link>My Toys</Link></li>}
-        {user && <li><Link to="/add-toy">Add Toy</Link></li>}
-        <li><Link to='/blogs'>Blogs</Link></li>
+        <li><ActiveLink to='/'>Home</ActiveLink></li>
+        <li><ActiveLink to='/all-toys'>All Toys</ActiveLink></li>
+        {user && <li><ActiveLink to='/my-toys'>My Toys</ActiveLink></li>}
+        {user && <li><ActiveLink to="/add-toy">Add Toy</ActiveLink></li>}
+        <li><ActiveLink to='/blogs'>Blogs</ActiveLink></li>
         <div className="form-control lg:ml-5 ml-0">
             <form className="input-group">
                 <input type="text" placeholder="Search…" className="input input-bordered" />
@@ -47,7 +48,7 @@ const NavMenu = () => {
             </div>
             <div className="ml-auto lg:ml-5 gap-3">
                 {user
-                    ? <><Link className="font-semibold">{user&& user?.photoURL && <img title={user?.displayName} className="h-11 w-11 rounded-full" src={user?.photoURL} alt="" />}</Link>
+                    ? <><a className="font-semibold">{user&& user?.photoURL && <img title={user?.displayName} className="h-11 w-11 rounded-full" src={user?.photoURL} alt="" />}</a>
                         <a onClick={logOutHandler} className="btn bg-blue-1000 hover:bg-blue-600 border-0">Log Out</a>
                     </>
                     : <Link to='/login' className="btn bg-blue-500 hover:bg-blue-600 border-0">Login</Link>
