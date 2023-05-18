@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: "Fredoka One",cursive;
+}
+p,span{
+    font-family:"Montserrat",sans-serif
+}
