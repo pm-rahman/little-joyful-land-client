@@ -1,7 +1,11 @@
+import Title from "../../../Components/Title/Title";
+import Banner from "../Banner/Banner";
+
 const Home = () => {
+    Title('Home')
     return (
         <div>
-            This is home
+            <Banner/>
         </div>
     );
 };
