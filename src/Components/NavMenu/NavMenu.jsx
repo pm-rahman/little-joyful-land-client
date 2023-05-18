@@ -17,7 +17,7 @@ const NavMenu = () => {
         <li><Link>All Toys</Link></li>
         {user && <li><Link>My Toys</Link></li>}
         {user && <li><Link>Add A Toy</Link></li>}
-        <li><Link>Blogs</Link></li>
+        <li><Link to='/blogs'>Blogs</Link></li>
         <div className="form-control lg:ml-10 ml-0">
             <form className="input-group">
                 <input type="text" placeholder="Search…" className="input input-bordered" />
