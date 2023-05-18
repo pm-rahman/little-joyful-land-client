@@ -13,12 +13,12 @@ const NavMenu = () => {
 
 
     const navItems = <>
-        <li><Link>Home</Link></li>
-        <li><Link>All Toys</Link></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/all-toys'>All Toys</Link></li>
         {user && <li><Link>My Toys</Link></li>}
-        {user && <li><Link>Add A Toy</Link></li>}
+        {user && <li><Link to="/add-toy">Add Toy</Link></li>}
         <li><Link to='/blogs'>Blogs</Link></li>
-        <div className="form-control lg:ml-10 ml-0">
+        <div className="form-control lg:ml-5 ml-0">
             <form className="input-group">
                 <input type="text" placeholder="Search…" className="input input-bordered" />
                 <button type="submit" className="btn bg-blue-500 hover:bg-blue-600 border-0">
@@ -45,7 +45,7 @@ const NavMenu = () => {
                     {navItems}
                 </ul>
             </div>
-            <div className="ml-auto lg:ml-10 gap-3">
+            <div className="ml-auto lg:ml-5 gap-3">
                 {user
                     ? <><Link className="font-semibold">{user&& user?.photoURL && <img title={user?.displayName} className="h-11 w-11 rounded-full" src={user?.photoURL} alt="" />}</Link>
                         <a onClick={logOutHandler} className="btn bg-blue-1000 hover:bg-blue-600 border-0">Log Out</a>
