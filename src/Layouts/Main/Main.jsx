@@ -5,8 +5,8 @@ import { Outlet } from 'react-router-dom';
 
 const Main = () => {
     return (
-        <div>
-            <div className='px-12'>
+        <div className='space-y-12'>
+            <div className='px-12 space-y-8'>
                 <NavMenu />
                 <Outlet />
             </div>

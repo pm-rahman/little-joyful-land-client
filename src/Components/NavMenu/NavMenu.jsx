@@ -8,9 +8,8 @@ const NavMenu = () => {
         <li><Link>All Toys</Link></li>
         {user && <li><Link>My Toys</Link></li>}
         {user && <li><Link>Add A Toy</Link></li>}
-
         <li><Link>Blogs</Link></li>
-        <div className="form-control">
+        <div className="form-control lg:ml-10 ml-0">
             <form className="input-group">
                 <input type="text" placeholder="Search…" className="input input-bordered" />
                 <button type="submit" className="btn bg-pink-500 hover:bg-pink-600 border-0">
@@ -20,29 +19,29 @@ const NavMenu = () => {
         </div>
     </>
     return (
-        <div className="navbar bg-base-100 py-5">
-            <div className="navbar-start">
+        <div className="navbar px-0 bg-base-100 py-5">
+            <div className="">
                 <div className="dropdown">
-                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                    <label tabIndex={0} className="btn pl-0 btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-fit">
                         {navItems}
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">(logo) Little Joyful Land</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="ml-auto w-fit hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold">
                     {navItems}
                 </ul>
             </div>
-            <div className="navbar-end gap-3">
+            <div className="ml-auto lg:ml-6 gap-3">
                 {user
                     ? <><Link>User profile picture</Link>
-                        <Link to='/login' className="btn bg-pink-500 hover:bg-pink-600 border-0">Login</Link>
+                        <a className="btn bg-pink-500 hover:bg-pink-600 border-0">Log Out</a>
                     </>
-                    :<a className="btn bg-pink-500 hover:bg-pink-600 border-0">Log Out</a>
+                    : <Link to='/login' className="btn bg-pink-500 hover:bg-pink-600 border-0">Login</Link>
                 }
             </div>
         </div>
