@@ -7,6 +7,7 @@ import Blogs from "../Pages/Blogs/Blogs";
 import AllToys from "../Pages/AllToys/AllToys";
 import AddToy from "../Pages/AddToy/AddToy";
 import PrivateRouter from "./PrivateRouter";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path:'*',
+        element: <ErrorPage/>
+    }
 ])
 
 export default router
