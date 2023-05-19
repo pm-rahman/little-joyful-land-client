@@ -35,7 +35,7 @@ const MyToy = () => {
                     .then(data => {
                         console.log(data)
                         if (data.deletedCount > 0) {
-                            const remaining = toys.filter(toy=>toy._id !==id);
+                            const remaining = toys.filter(toy => toy._id !== id);
                             setToys(remaining);
                             Swal.fire(
                                 'Deleted!',
@@ -74,7 +74,7 @@ const MyToy = () => {
                         <td>${toy.price}</td>
                         <td>{toy.quantity}</td>
                         <td className="flex gap-2">
-                            <Link className="btn my-2 bg-blue-500 hover:bg-blue-600 border-0"><Icon icon="fa-regular:edit" /></Link>
+                            <Link to={`/update/${toy._id}`} className="btn my-2 bg-blue-500 hover:bg-blue-600 border-0"><Icon icon="fa-regular:edit" /></Link>
                             <button onClick={() => deleteItemHandler(toy._id)} className="btn my-2 bg-blue-500 hover:bg-blue-600 border-0"><Icon icon="fa-regular:trash-alt" /></button>
                         </td>
                     </tr>
