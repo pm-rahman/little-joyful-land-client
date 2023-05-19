@@ -8,7 +8,7 @@ const Gallery = () => {
                     <div className="bg-slate-300 absolute top-0 left-0 -z-10 opacity-20 h-full w-full"></div>
                     <div className="h-full flex gap-5 flex-col items-center justify-center">
                         <h4 className="text-xl sm:text-3xl md:text-4xl font-bold text-blue-800">Exclusive Toys</h4>
-                        <button className="btn bg-blue-500 rounded-full px-6 border-none py-2">Shop Now</button>
+                        <button className="btn bg-blue-600 hover:bg-blue-700 rounded-full px-6 border-none py-2">Shop Now</button>
                     </div>
                     <img className="rounded-md w-auto h-full absolute top-0 -z-20 left-0" src="https://media.istockphoto.com/id/145163491/photo/vertical-line-of-cars.jpg?s=612x612&w=is&k=20&c=s7sKjMT_BN4nc7J3lmR5dmVWb33H5OslYAYTUrWOi54=" alt="" />
                 </div>

@@ -12,7 +12,6 @@ const NavMenu = () => {
         })
     }
 
-
     const navItems = <>
         <li><ActiveLink to='/'>Home</ActiveLink></li>
         <li><ActiveLink to='/all-toys'>All Toys</ActiveLink></li>
@@ -48,8 +47,8 @@ const NavMenu = () => {
             </div>
             <div className="ml-auto lg:ml-5 gap-3">
                 {user
-                    ? <><a className="font-semibold">{user&& user?.photoURL && <img title={user?.displayName} className="h-11 w-11 rounded-full" src={user?.photoURL} alt="" />}</a>
-                        <a onClick={logOutHandler} className="btn bg-blue-1000 hover:bg-blue-600 border-0">Log Out</a>
+                    ? <><a className="font-semibold">{user && user?.photoURL ? <img title={user?.displayName} className="h-11 w-11 rounded-full" src={user?.photoURL} alt="" />:''}</a>
+                        <a onClick={logOutHandler} className="btn bg-blue-500 hover:bg-blue-600 border-0">Log Out</a>
                     </>
                     : <Link to='/login' className="btn bg-blue-500 hover:bg-blue-600 border-0">Login</Link>
                 }
