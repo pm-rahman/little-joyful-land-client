@@ -3,18 +3,51 @@ import Title from "../../Components/Title/Title";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import Swal from "sweetalert2";
 
 const MyToy = () => {
     const { user } = useContext(AuthContext)
-    const [toys, setToys] = useState();
+    const [toys, setToys] = useState([]);
     Title('My-Toy');
     useEffect(() => {
         fetch(`http://localhost:5000/user-toys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);
+                console.log(data);
             })
     }, [])
+    const deleteItemHandler = (id) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/user-toys/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            const remaining = toys.filter(toy=>toy._id !==id);
+                            setToys(remaining);
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Product has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+
+    }
     console.log(toys);
     return (
         <div>
@@ -41,8 +74,8 @@ const MyToy = () => {
                         <td>${toy.price}</td>
                         <td>{toy.quantity}</td>
                         <td className="flex gap-2">
-                            <Link className="btn my-2 bg-blue-500 hover:bg-blue-600 border-0"><Icon icon="fa-regular:trash-alt" /></Link>
                             <Link className="btn my-2 bg-blue-500 hover:bg-blue-600 border-0"><Icon icon="fa-regular:edit" /></Link>
+                            <button onClick={() => deleteItemHandler(toy._id)} className="btn my-2 bg-blue-500 hover:bg-blue-600 border-0"><Icon icon="fa-regular:trash-alt" /></button>
                         </td>
                     </tr>
                     )}
