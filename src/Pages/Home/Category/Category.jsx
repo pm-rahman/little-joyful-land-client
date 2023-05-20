@@ -13,13 +13,12 @@ const Category = () => {
     }, [category]);
     return (
         <Tabs>
-            <h2 className='text-xl md:text-2xl mb-5 font-bold'>Shope by category</h2>
+            <h2 className='text-xl md:text-2xl mb-5 font-bold'>Shop by category</h2>
             <TabList>
                 <Tab onClick={() => setCategory('sportsCar')}><span className='font-semibold'>Sports car</span></Tab>
                 <Tab onClick={() => setCategory('truck')}><span className='font-semibold'>Truck</span></Tab>
                 <Tab onClick={() => setCategory('regularCar')}><span className='font-semibold'>Regular car</span></Tab>
             </TabList>
-
             <TabPanel>
                 <div className='grid md:grid-cols-3 gap-4'>
                     {
@@ -46,7 +45,7 @@ const Category = () => {
                     {
                         category === 'truck' && toys.map(toy => <div
                             key={toy._id}
-                            >
+                        >
                             <div className="card bg-base-100 shadow-md">
                                 <img className="rounded-md max-h-full max-w-auto m-auto" src={toy.toyPic} alt="" />
                                 <div className="card-body">
@@ -68,7 +67,7 @@ const Category = () => {
                     {
                         category === 'regularCar' && toys.map(toy => <div
                             key={toy._id}
-                            >
+                        >
                             <div className="card bg-base-100 shadow-md">
                                 <img className="rounded-md max-h-full max-w-auto m-auto" src={toy.toyPic} alt="" />
                                 <div className="card-body">
