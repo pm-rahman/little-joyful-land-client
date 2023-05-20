@@ -13,7 +13,6 @@ const UpdateToy = () => {
 
 
     const onSubmit = data => {
-        console.log(data);
         fetch(`http://localhost:5000/update/${_id}`, {
             method: 'PATCH',
             headers: {
@@ -23,7 +22,6 @@ const UpdateToy = () => {
         })
             .then(res => res.json())
             .then(toy => {
-                console.log(toy);
                 if(toy.modifiedCount){
                     Swal.fire({
                         position: 'top-end',

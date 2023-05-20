@@ -25,7 +25,7 @@ const Category = () => {
                         category === 'sportsCar' && toys.map(toy => <div
                             key={toy._id}>
                             <div className="card bg-base-100 max-w-auto shadow-md">
-                                <img className="rounded-md max-h-full m-auto" src={toy.toyPic} alt="" />
+                            <div className='w-full p-5'><img className="rounded-md h-60 w-auto m-auto" src={toy.toyPic} alt="" /></div>
                                 <div className="card-body">
                                     <h2 className="card-title">
                                         {toy.toyName}
@@ -47,7 +47,7 @@ const Category = () => {
                             key={toy._id}
                         >
                             <div className="card bg-base-100 shadow-md">
-                                <img className="rounded-md max-h-full max-w-auto m-auto" src={toy.toyPic} alt="" />
+                            <div className='w-full p-5'><img className="rounded-md h-60 w-auto m-auto" src={toy.toyPic} alt="" /></div>
                                 <div className="card-body">
                                     <h2 className="card-title">
                                         {toy.toyName}
@@ -69,7 +69,7 @@ const Category = () => {
                             key={toy._id}
                         >
                             <div className="card bg-base-100 shadow-md">
-                                <img className="rounded-md max-h-full max-w-auto m-auto" src={toy.toyPic} alt="" />
+                            <div className='w-full p-5'><img className="rounded-md h-60 w-auto m-auto" src={toy.toyPic} alt="" /></div>
                                 <div className="card-body">
                                     <h2 className="card-title">
                                         {toy.toyName}

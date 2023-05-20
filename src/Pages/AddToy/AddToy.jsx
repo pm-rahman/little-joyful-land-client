@@ -3,21 +3,21 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import Title from "../../Components/Title/Title";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const AddToy = () => {
 
     const { user } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
     Title('Add-Toy')
-
-    const onSubmit = data => {
-        console.log(data);
+    const naviGate = useNavigate()
+    const createProductHandler = newToy => {
         fetch('http://localhost:5000/toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(newToy)
         })
             .then(res => res.json())
             .then(data => {
@@ -29,14 +29,14 @@ const AddToy = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
+                    naviGate('/')
                 }
-                console.log(data);
             })
     };
     return (
         <div>
             <h3 className="text-3xl text-center font-bold mb-4">Add New Toy</h3>
-            <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-3 gap-x-10 gap-y-4 bg-blue-100 p-12 rounded-lg">
+            <form onSubmit={handleSubmit(createProductHandler)} className="grid grid-cols-3 gap-x-10 gap-y-4 bg-blue-100 p-12 rounded-lg">
                 {/* register your input into the hook by invoking the "register" function */}
                 <div className="form-control">
                     <label className="label">

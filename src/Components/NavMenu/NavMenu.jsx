@@ -2,14 +2,15 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import ActiveLink from "../ActiveLink/ActiveLink";
 import { Link } from "react-router-dom";
+
 const NavMenu = () => {
-    const { user,logOut } = useContext(AuthContext)
-    const logOutHandler = ()=>{
+    const { user, logOut } = useContext(AuthContext)
+    const logOutHandler = () => {
         logOut()
-        .then(()=>{})
-        .catch(err=>{
-            console.log(err.message)
-        })
+            .then(() => { })
+            .catch(err => {
+                console.log(err.message)
+            })
     }
 
 
@@ -31,7 +32,7 @@ const NavMenu = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-lg">(logo) <span className="hidden sm:block">Little Joyful Land</span></a>
+                <Link to="/" className="btn btn-ghost normal-case text-lg"><img className="h-12" src="https://i.ibb.co/9bHGqtG/main-logo.png" alt="" /> <span className="hidden sm:block">Little Joyful Land</span></Link>
             </div>
             <div className="ml-auto w-fit hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold">
@@ -40,7 +41,7 @@ const NavMenu = () => {
             </div>
             <div className="ml-auto lg:ml-5 gap-3">
                 {user
-                    ? <><a className="font-semibold">{user && user?.photoURL ? <img title={user?.displayName} className="h-11 w-11 rounded-full" src={user?.photoURL} alt="" />:''}</a>
+                    ? <><a className="font-semibold">{user && user?.photoURL ? <img title={user?.displayName} className="h-11 w-11 rounded-full" src={user?.photoURL} alt="" /> : ''}</a>
                         <a onClick={logOutHandler} className="btn text-xs md:text-base bg-blue-500 hover:bg-blue-600 border-0">Log Out</a>
                     </>
                     : <Link to='/login' className="btn bg-blue-500 hover:bg-blue-600 border-0">Login</Link>

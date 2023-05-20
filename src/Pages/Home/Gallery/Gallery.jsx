@@ -2,15 +2,15 @@
 const Gallery = () => {
     return (
         <div>
-            <h3 className="text-xl sm:text-3xl md:text-4xl font-bold mb-8">Exclusive for you (change)</h3>
+            <h3 className="text-xl sm:text-3xl md:text-4xl font-bold mb-8">Exclusive products</h3>
             <div className="grid md:grid-cols-3 gap-8 md:grid-rows-2">
                 <div className="row-span-2 z-0 relative overflow-hidden"  data-aos="fade-right">
-                    <div className="bg-slate-300 absolute top-0 left-0 -z-10 opacity-20 h-full w-full"></div>
-                    <div className="h-full flex gap-5 flex-col items-center justify-center">
-                        <h4 className="text-xl sm:text-3xl md:text-4xl font-bold text-blue-800">Exclusive Toys</h4>
+                    <div className="bg-slate-400 absolute top-0 left-0 -z-10 opacity-10 h-full w-full"></div>
+                    <div className="h-full flex gap-3 flex-col items-center justify-center">
+                        <h4 className="text-xl sm:text-2xl md:text-3xl bg-slate-50 p-2 rounded-md font-bold text-blue-800">Exclusive Toys</h4>
                         <button className="btn bg-blue-600 hover:bg-blue-700 rounded-full px-6 border-none py-2">Shop Now</button>
                     </div>
-                    <img className="rounded-md w-auto h-full absolute top-0 -z-20 left-0" src="https://media.istockphoto.com/id/145163491/photo/vertical-line-of-cars.jpg?s=612x612&w=is&k=20&c=s7sKjMT_BN4nc7J3lmR5dmVWb33H5OslYAYTUrWOi54=" alt="" />
+                    <img className="rounded-md w-auto h-full absolute top-0 -z-20 left-0" src="https://i.ibb.co/MSGD4TJ/gallary-1.png" alt="" />
                 </div>
 
                 <div className="border flex flex-col h-72 items-center justify-center rounded-lg p-6" data-aos="fade-up">

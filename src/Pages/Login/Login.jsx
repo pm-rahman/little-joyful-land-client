@@ -17,13 +17,11 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         setError('')
-        console.log(data,name)
         const { email, password } = data;
         console.log(email,password)
         loginUser(email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user)
+            .then(() => {
+                // const user = result.user;
                 naviGate(from)
             })
             .catch(err => {
@@ -34,9 +32,7 @@ const Login = () => {
     const googleUserHandler = () => {
         setError('');
         loginWithGoogle()
-            .then(result => {
-                const user = result.user;
-                console.log(user);
+            .then(() => {
                 naviGate(from)
             })
             .catch(error => {

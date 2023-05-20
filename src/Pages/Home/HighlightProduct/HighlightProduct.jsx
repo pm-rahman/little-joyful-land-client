@@ -20,7 +20,7 @@ const HighlightProduct = () => {
                 <h3 className="mb-6 border-l-4 pl-5 border-l-blue-500 text-lg sm:text-xl md:text-2xl font-bold">New Products</h3>
                 {highlightToys.slice(0, 3).map(toy => <div
                     key={toy._id}
-                    className="flex gap-10 mb-3 items-center px-8 py-3 rounded-lg shadow-md hover:shadow-lg">
+                    className="flex gap-10 h-32  mb-3 items-center px-8 py-3 rounded-lg shadow-md hover:shadow-lg">
                     <img className="rounded-md h-auto w-28" src={toy.toyPic} alt="" data-aos="zoom-in" data-aos-duration="1000" />
                     <div className="text-xl">
                         <h4 className="font-bold">{toy.toyName}</h4>
@@ -35,8 +35,8 @@ const HighlightProduct = () => {
                 {highlightToys.slice(3, 6).map(toy => <div
                     data-aos="zoom-in"
                     key={toy._id}
-                    className="flex gap-10 mb-3 items-center px-8 py-3 rounded-lg shadow-md hover:shadow-lg">
-                    <img className="rounded-md h-auto w-28" src={toy.toyPic} alt="" data-aos-duration="1000" />
+                    className="flex gap-10 h-32 mb-3 items-center px-8 py-3 rounded-lg shadow-md hover:shadow-lg">
+                    <img className="rounded-md h-auto w-28" src={toy.toyPic} alt="" data-aos="zoom-in" data-aos-duration="1000" />
                     <div className="text-xl">
                         <h4 className="font-bold">{toy.toyName}</h4>
                         <p className="text-blue-600 font-semibold"><small>${toy.price}</small></p>

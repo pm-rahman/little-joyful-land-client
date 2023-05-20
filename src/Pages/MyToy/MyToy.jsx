@@ -8,16 +8,18 @@ import Swal from "sweetalert2";
 const MyToy = () => {
     const { user } = useContext(AuthContext)
     const [toys, setToys] = useState([]);
-    const [sortHandler, setSortHandler] = useState(true)
-    Title('My-Toy');
+    const [sortHandler, setSortHandler] = useState(1);
+    // const [ascending,setAscending] = useState(true)
+    Title('My-Toys');
     useEffect(() => {
-        fetch(`http://localhost:5000/user-toys?email=${user?.email}`)
+        fetch(`http://localhost:5000/user-toys?email=${user?.email}&shortingValue=${sortHandler}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);
-                console.log(data);
+                // console.log(data);
             })
-    }, [])
+    }, [sortHandler])
+
     const deleteItemHandler = (id) => {
         Swal.fire({
             title: 'Are you sure?',
@@ -49,13 +51,12 @@ const MyToy = () => {
         })
 
     }
-    console.log(toys);
     return (
         <div>
             <div className="flex gap-2 justify-end mb-4">
-                {sortHandler ?
-                    <button onClick={()=>setSortHandler(!sortHandler)}>Sort by 0-10</button>
-                    : <button onClick={()=>setSortHandler(!sortHandler)}>Sort by 10-0</button>
+                {sortHandler === -1 ?
+                    <button onClick={()=>setSortHandler(1)}>Sort by 0-10</button>
+                    : <button onClick={()=>setSortHandler(-1)}>Sort by 10-0</button>
                 }
             </div>
             <table className="table table-compact w-full">

@@ -15,13 +15,11 @@ const Register = () => {
     const naviGate = useNavigate()
     const onSubmit = data => {
         setError('')
-        console.log(data.name,)
         const { name, email, photo, password } = data;
         createNewUser(email, password)
             .then(result => {
                 const user = result.user;
                 updateUserHandler(user, name, photo)
-                console.log(user);
                 naviGate('/')
             })
             .catch(err => {
@@ -32,9 +30,7 @@ const Register = () => {
     const googleUserHandler = () => {
         setError('');
         loginWithGoogle()
-            .then(result => {
-                const user = result.user;
-                console.log(user);
+            .then(() => {
                 naviGate('/')
             })
             .catch(error => {

@@ -9,7 +9,7 @@ const ToyDetailsPage = () => {
     return (
         <div className="hero p-10 rounded-lg bg-slate-100">
             <div className="hero-content flex-col gap-16 lg:flex-row">
-                <img src={toyPic} className="w-1/2 rounded-lg shadow-2xl" />
+                <div><img src={toyPic} className="w-full mx-auto rounded-lg shadow-2xl" /></div>
                 <div className="w-1/2 space-y-2">
                     <h1 className="text-5xl font-bold">{toyName}</h1>
                     <hr  className="py-1"/>
