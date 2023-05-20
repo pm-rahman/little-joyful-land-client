@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 const MyToy = () => {
     const { user } = useContext(AuthContext)
     const [toys, setToys] = useState([]);
+    const [sortHandler, setSortHandler] = useState(true)
     Title('My-Toy');
     useEffect(() => {
         fetch(`http://localhost:5000/user-toys?email=${user?.email}`)
@@ -51,6 +52,12 @@ const MyToy = () => {
     console.log(toys);
     return (
         <div>
+            <div className="flex gap-2 justify-end mb-4">
+                {sortHandler ?
+                    <button onClick={()=>setSortHandler(!sortHandler)}>Sort by 0-10</button>
+                    : <button onClick={()=>setSortHandler(!sortHandler)}>Sort by 10-0</button>
+                }
+            </div>
             <table className="table table-compact w-full">
                 <thead>
                     <tr>

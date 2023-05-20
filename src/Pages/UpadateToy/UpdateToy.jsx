@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Title from "../../Components/Title/Title";
 import Swal from "sweetalert2";
@@ -9,7 +9,7 @@ const UpdateToy = () => {
     // console.log(price, quantity, description)
     const { register, handleSubmit, formState: { errors } } = useForm();
     Title('Update-Toy')
-
+    const naviGate = useNavigate()
 
 
     const onSubmit = data => {
@@ -24,7 +24,7 @@ const UpdateToy = () => {
             .then(res => res.json())
             .then(toy => {
                 console.log(toy);
-                if(data.modifiedCount){
+                if(toy.modifiedCount){
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
@@ -32,6 +32,7 @@ const UpdateToy = () => {
                         showConfirmButton: false,
                         timer: 1500
                       })
+                      naviGate('/my-toys')
                 }
             })
 

@@ -18,7 +18,7 @@ const ToyDetailsPage = () => {
                     <p className="text-lg"><span className="font-semibold">Price: </span>{price}</p>
                     <p className="text-lg"><span className="font-semibold">Quantity: </span>{quantity}</p>
                     <p className=""><span className="font-semibold">Description:</span>{description}</p>
-                    <p className="text-lg flex gap-2"><span className="font-semibold">Rating: </span>
+                    <div className="text-lg flex gap-2"><span className="font-semibold">Rating: </span>
                         <Rating
                             className="mt-auto mb-1"
                             style={{ width: 100 }}
@@ -26,7 +26,7 @@ const ToyDetailsPage = () => {
                             readOnly
                         />
                         {rating}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

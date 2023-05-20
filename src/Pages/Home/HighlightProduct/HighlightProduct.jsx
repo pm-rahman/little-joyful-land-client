@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const HighlightProduct = () => {
     const [highlightToys, setHighlightToys] = useState([])
@@ -17,7 +19,7 @@ const HighlightProduct = () => {
                     <img className="rounded-md hover:scale-125 hover:duration-300 h-auto w-28" src={toy.toyPic} alt="" />
                     <div className="text-xl">
                         <h4 className="font-bold">{toy.toyName}</h4>
-                        <p className="text-blue-600">${toy.price}</p>
+                        <p className="text-blue-600 font-semibold"><small>${toy.price}</small></p>
                     </div>
                 </div>
                 )}
@@ -31,7 +33,15 @@ const HighlightProduct = () => {
                     <img className="rounded-md hover:scale-125 hover:duration-300 h-auto w-28" src={toy.toyPic} alt="" />
                     <div className="text-xl">
                         <h4 className="font-bold">{toy.toyName}</h4>
-                        <p className="text-blue-600">${toy.price}</p>
+                        <p className="text-blue-600 font-semibold"><small>${toy.price}</small></p>
+                        <div className="flex gap-1 items-center">
+                            <small>{toy.rating}</small>
+                            <Rating
+                                style={{ maxWidth: 100 }}
+                                value={toy.rating}
+                                readOnly
+                            />
+                        </div>
                     </div>
                 </div>
                 )}
