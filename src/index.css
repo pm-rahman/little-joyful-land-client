@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 *{
-    font-family: "Fredoka One",cursive;
+    font-family: 'Wix Madefor Text', sans-serif;
 }
 p,span,a{
-    font-family:"Montserrat",sans-serif
+    font-family: 'Kanit', sans-serif;
 }

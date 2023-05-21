@@ -22,7 +22,7 @@ const NavMenu = () => {
         <li><ActiveLink to='/blogs'>Blogs</ActiveLink></li>
     </>
     return (
-        <div className="navbar px-0 bg-base-100 py-5">
+        <div className="navbar px-0 pb-0 bg-base-100 pt-5">
             <div className="">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn pl-0 btn-ghost lg:hidden">

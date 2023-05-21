@@ -23,7 +23,7 @@ const HighlightProduct = () => {
                     className="flex gap-10 h-32  mb-3 items-center px-8 py-3 rounded-lg shadow-md hover:shadow-lg">
                     <img className="rounded-md h-auto w-28" src={toy.toyPic} alt="" data-aos="zoom-in" data-aos-duration="1000" />
                     <div className="text-xl">
-                        <h4 className="font-bold">{toy.toyName}</h4>
+                        <h4 className="font-bold text-base md:text-lg">{toy.toyName}</h4>
                         <p className="text-blue-600 font-semibold"><small>${toy.price}</small></p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const HighlightProduct = () => {
                     className="flex gap-10 h-32 mb-3 items-center px-8 py-3 rounded-lg shadow-md hover:shadow-lg">
                     <img className="rounded-md h-auto w-28" src={toy.toyPic} alt="" data-aos="zoom-in" data-aos-duration="1000" />
                     <div className="text-xl">
-                        <h4 className="font-bold">{toy.toyName}</h4>
+                        <h4 className="font-bold text-base md:text-lg">{toy.toyName}</h4>
                         <p className="text-blue-600 font-semibold"><small>${toy.price}</small></p>
                         <div className="flex gap-1 items-center">
                             <small>{toy.rating}</small>
