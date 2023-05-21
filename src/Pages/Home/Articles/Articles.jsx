@@ -3,7 +3,7 @@ const Articles = () => {
         <div className="rounded-lg">
             <h4 className="text-xl md:text-3xl mb-5 font-extrabold">Read Our Articles</h4>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                <div className="card bg-base-100 shadow-xl" data-aos="zoom-in">
+                <div className="card bg-white shadow-xl" data-aos="zoom-in">
                     <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1162019476/photo/boy-and-dog-in-toy-racing-car.jpg?s=612x612&w=0&k=20&c=q4VZNxBRnpl9gHv3om30YhAKGOyKmTzPV0eSoHGCfGo=" alt="" data-aos-duration="1000" />
                     <div className="card-body">
                         <h2 className="card-title">
@@ -19,7 +19,7 @@ const Articles = () => {
                         We will suggest suitable toys that cater to their cognitive, physical, and emotional needs.
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl" data-aos="zoom-in">
+                <div className="card bg-white shadow-xl" data-aos="zoom-in">
                     <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1283681886/photo/little-boy-riding-toy-car-in-the-garden.jpg?s=612x612&w=0&k=20&c=3B-qiRGCB1cUbUuAYZuSiVYf74hGrE3IOL2G3PWYCw4=" alt="" data-aos-duration="1000" />
                     <div className="card-body">
                         <h2 className="card-title">
@@ -36,7 +36,7 @@ const Articles = () => {
                         The toys mentioned above offer a perfect blend of entertainment and education, ensuring that children have a fulfilling and enriching playtime experience.
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl" data-aos="zoom-in">
+                <div className="card bg-white shadow-xl" data-aos="zoom-in">
                     <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1042058916/photo/boy-playing-with-toy-car.jpg?s=612x612&w=0&k=20&c=EP4GkZ3PMbYcjWorkUjk6DItJTLJTM0l6PAdjVu5vi8=" alt="" data-aos-duration="1000" />
                     <div className="card-body">
                         <h2 className="card-title">
