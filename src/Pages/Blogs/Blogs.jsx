@@ -35,7 +35,7 @@ const Blogs = () => {
                 </p>
             </div>
             <div className="mb-6 bg-slate-50 p-8 rounded-lg">
-                <h2 className="text-xl font-bold mb-2">What is MongoDB aggregate and how does it work (google it)?</h2>
+                <h2 className="text-xl font-bold mb-2">What is MongoDB aggregate and how does it work?</h2>
                 <p>Perform operations on the grouped data to return a single result like maximum minimum. Analyze data changes over time.</p>
             </div>
         </div>

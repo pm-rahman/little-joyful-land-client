@@ -7,7 +7,7 @@ const Category = () => {
     const [category, setCategory] = useState('sportsCar')
     const [toys, setToys] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/toy-category?category=${category}`)
+        fetch(`https://toy-assignment-server.vercel.app/toy-category?category=${category}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [category]);
@@ -24,7 +24,7 @@ const Category = () => {
                     {
                         category === 'sportsCar' && toys.map(toy => <div
                             key={toy._id}>
-                            <div className="card bg-base-100 max-w-auto shadow-md">
+                            <div style={{height:'500px'}} className="card bg-base-100 max-w-auto shadow-md">
                             <div className='w-full p-5'><img className="rounded-md h-60 w-auto m-auto" src={toy.toyPic} alt="" /></div>
                                 <div className="card-body">
                                     <h2 className="card-title">
@@ -46,7 +46,7 @@ const Category = () => {
                         category === 'truck' && toys.map(toy => <div
                             key={toy._id}
                         >
-                            <div className="card bg-base-100 shadow-md">
+                            <div style={{height:'500px'}} className="card bg-base-100 max-w-auto shadow-md">
                             <div className='w-full p-5'><img className="rounded-md h-60 w-auto m-auto" src={toy.toyPic} alt="" /></div>
                                 <div className="card-body">
                                     <h2 className="card-title">
@@ -68,7 +68,7 @@ const Category = () => {
                         category === 'regularCar' && toys.map(toy => <div
                             key={toy._id}
                         >
-                            <div className="card bg-base-100 shadow-md">
+                            <div style={{height:'500px'}} className="card bg-base-100 max-w-auto shadow-md">
                             <div className='w-full p-5'><img className="rounded-md h-60 w-auto m-auto" src={toy.toyPic} alt="" /></div>
                                 <div className="card-body">
                                     <h2 className="card-title">

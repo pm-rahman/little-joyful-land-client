@@ -12,7 +12,7 @@ const MyToy = () => {
     // const [ascending,setAscending] = useState(true)
     Title('My-Toys');
     useEffect(() => {
-        fetch(`http://localhost:5000/user-toys?email=${user?.email}&shortingValue=${sortHandler}`)
+        fetch(`https://toy-assignment-server.vercel.app/user-toys?email=${user?.email}&shortingValue=${sortHandler}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);
@@ -31,12 +31,11 @@ const MyToy = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/user-toys/${id}`, {
+                fetch(`https://toy-assignment-server.vercel.app/user-toys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
                         if (data.deletedCount > 0) {
                             const remaining = toys.filter(toy => toy._id !== id);
                             setToys(remaining);

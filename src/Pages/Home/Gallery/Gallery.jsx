@@ -14,7 +14,7 @@ const Gallery = () => {
                 </div>
 
                 <div className="border flex flex-col h-72 items-center justify-center rounded-lg p-6" data-aos="fade-up">
-                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://i.ibb.co/d0Rvw01/gallery-pic-3.jpg" alt="" />
+                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://i.ibb.co/MptW6hP/gallery-pic-3.jpg" alt="" />
                     <h5 className="text-xl font-bold">Toy Argos cars</h5>
                 </div>
 

@@ -12,13 +12,13 @@ const AllToys = () => {
     Title('All-toys')
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?limit=${toyPerPage}&page=${currentPage}`)
+        fetch(`https://toy-assignment-server.vercel.app/toys?limit=${toyPerPage}&page=${currentPage}`)
             .then(res => res.json())
             .then(data => setAllToys(data))
     }, [currentPage, toyPerPage])
 
     const onSubmit = data => {
-        fetch(`http://localhost:5000/searchToy/${data.search}`)
+        fetch(`https://toy-assignment-server.vercel.app/searchToy/${data.search}`)
             .then(res => res.json())
             .then(data => setAllToys(data))
     };

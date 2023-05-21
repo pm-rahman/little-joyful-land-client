@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { Icon } from '@iconify/react';
+import Title from "../../Components/Title/Title";
 
 const ErrorPage = () => {
+    Title('Error')
     const naviGate = useNavigate()
     const goBackHandler =()=>{
         naviGate('/')

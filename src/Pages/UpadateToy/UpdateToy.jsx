@@ -5,20 +5,22 @@ import Swal from "sweetalert2";
 
 const UpdateToy = () => {
     const { _id, description, email, price, quantity, rating, sellerName, subCategory, toyName, toyPic } = useLoaderData();
-    // const {price, quantity, description} = toy;
-    // console.log(price, quantity, description)
     const { register, handleSubmit, formState: { errors } } = useForm();
     Title('Update-Toy')
     const naviGate = useNavigate()
 
 
-    const onSubmit = data => {
-        fetch(`http://localhost:5000/update/${_id}`, {
+    const onSubmit = updateToy => {
+        const { description, email, price, quantity, rating, sellerName, subCategory, toyName, toyPic } = updateToy;
+        const intPrice = parseInt(price);
+        const toy = {description, email, price : intPrice, quantity, rating, sellerName, subCategory, toyName, toyPic};
+
+        fetch(`https://toy-assignment-server.vercel.app/update/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(toy)
         })
             .then(res => res.json())
             .then(toy => {
@@ -31,6 +33,15 @@ const UpdateToy = () => {
                         timer: 1500
                       })
                       naviGate('/my-toys')
+                }
+                else{
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: 'You need update something',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
                 }
             })
 

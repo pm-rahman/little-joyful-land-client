@@ -11,8 +11,12 @@ const AddToy = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     Title('Add-Toy')
     const naviGate = useNavigate()
-    const createProductHandler = newToy => {
-        fetch('http://localhost:5000/toy', {
+    const createProductHandler = toy => {
+        const { description, email, price, quantity, rating, sellerName, subCategory, toyName, toyPic } = toy;
+        const intPrice = parseInt(price);
+        const newToy = {description, email, price : intPrice, quantity, rating, sellerName, subCategory, toyName, toyPic};
+
+        fetch('https://toy-assignment-server.vercel.app/toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

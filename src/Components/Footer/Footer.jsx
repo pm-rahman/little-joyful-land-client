@@ -13,10 +13,9 @@ const Footer = () => {
                 </div>
                 <div>
                     <span className="footer-title">Pages</span>
-                    <Link to='/' className="link link-hover">About us</Link>
+                    <Link to='/' className="link link-hover">Home</Link>
                     <Link to='/blogs' className="link link-hover">Blogs</Link>
-                    <Link to='/all-products' className="link link-hover">All Toy</Link>
-                    <Link className="link link-hover">Press kit</Link>
+                    <Link to='/all-toys' className="link link-hover">All Toy</Link>
                 </div>
                 <div>
                     <span className="footer-title">Legal</span>

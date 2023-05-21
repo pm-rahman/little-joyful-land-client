@@ -7,7 +7,7 @@ import 'aos/dist/aos.css'
 const HighlightProduct = () => {
     const [highlightToys, setHighlightToys] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/highlightProduct')
+        fetch('https://toy-assignment-server.vercel.app/highlightProduct')
             .then(res => res.json())
             .then(data => setHighlightToys(data))
     }, [])

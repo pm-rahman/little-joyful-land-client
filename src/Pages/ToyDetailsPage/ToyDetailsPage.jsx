@@ -14,7 +14,7 @@ const ToyDetailsPage = () => {
                     <h1 className="text-5xl font-bold">{toyName}</h1>
                     <hr  className="py-1"/>
                     <p className="font-semibold text-lg">Seller : {sellerName}</p>
-                    <p className="text-lg"><span className="font-semibold">Email: </span>{email}</p>
+                    <p className="text-lg"><span className="font-semibold">Seller Email: </span>{email}</p>
                     <p className="text-lg"><span className="font-semibold">Price: </span>{price}</p>
                     <p className="text-lg"><span className="font-semibold">Quantity: </span>{quantity}</p>
                     <p className=""><span className="font-semibold">Description:</span>{description}</p>
