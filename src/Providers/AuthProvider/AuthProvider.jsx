@@ -26,7 +26,7 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
         })
         return unsubscribe;
-    },[])
+    },[user])
     const logOut = ()=>{
         return signOut(auth);
     }
