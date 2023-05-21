@@ -4,7 +4,7 @@ const Articles = () => {
             <h4 className="text-xl md:text-3xl mb-5 font-extrabold">Read Our Articles</h4>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 <div className="card bg-base-100 shadow-xl" data-aos="zoom-in">
-                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://i.pinimg.com/originals/dd/7d/82/dd7d829052d31a2dd8cc8f50015f3ea2.jpg" alt="" data-aos-duration="1000" />
+                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1162019476/photo/boy-and-dog-in-toy-racing-car.jpg?s=612x612&w=0&k=20&c=q4VZNxBRnpl9gHv3om30YhAKGOyKmTzPV0eSoHGCfGo=" alt="" data-aos-duration="1000" />
                     <div className="card-body">
                         <h2 className="card-title">
                             Choosing the Right Toys for Children: A Comprehensive Guide
@@ -20,7 +20,7 @@ const Articles = () => {
                     </div>
                 </div>
                 <div className="card bg-base-100 shadow-xl" data-aos="zoom-in">
-                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://img-us.aosomcdn.com/thumbnail/100/n0/product/2022/12/30/txc90f18560dfc915.jpg" alt="" data-aos-duration="1000" />
+                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1283681886/photo/little-boy-riding-toy-car-in-the-garden.jpg?s=612x612&w=0&k=20&c=3B-qiRGCB1cUbUuAYZuSiVYf74hGrE3IOL2G3PWYCw4=" alt="" data-aos-duration="1000" />
                     <div className="card-body">
                         <h2 className="card-title">
                             Engaging and Educational Toys for Children
@@ -37,7 +37,7 @@ const Articles = () => {
                     </div>
                 </div>
                 <div className="card bg-base-100 shadow-xl" data-aos="zoom-in">
-                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://isakaabengaluru.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/12/08010134/He7985ebaeef34abd8cc6eec712165d28x.jpg_960x960.webp" alt="" data-aos-duration="1000" />
+                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1042058916/photo/boy-playing-with-toy-car.jpg?s=612x612&w=0&k=20&c=EP4GkZ3PMbYcjWorkUjk6DItJTLJTM0l6PAdjVu5vi8=" alt="" data-aos-duration="1000" />
                     <div className="card-body">
                         <h2 className="card-title">
                             Must-Have Children's Toys for Endless Fun and Learning
