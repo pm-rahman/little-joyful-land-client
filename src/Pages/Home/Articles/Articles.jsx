@@ -1,65 +1,58 @@
+import { Icon } from "@iconify/react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+const articles = [
+  {
+    id: 1,
+    image:
+      "https://media.istockphoto.com/id/1162019476/photo/boy-and-dog-in-toy-racing-car.jpg?s=612x612&w=0&k=20&c=q4VZNxBRnpl9gHv3om30YhAKGOyKmTzPV0eSoHGCfGo=",
+    title: "Choosing the Right Toys for Children: A Comprehensive Guide",
+    article:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus tempora officia fugiat sit nulla, rerum veritatis harum saepe reiciendis reprehenderit cumque esse quasi quidem laborum cum ipsam ullam vel eaque laudantium. Accusantium suscipit similique dolorum maxime eaque eos quas, reprehenderit excepturi culpa ex earum labore placeat tempore sunt odio ullam? Fuga, ut! In non qui reiciendis architecto molestiae cumque quae autem asperiores mollitia adipisci provident error hic voluptatem omnis pariatur, tempora commodi assumenda officia. Similique sunt veniam corporis quae dolorem.",
+  },
+  {
+    id: 2,
+    image:
+      "https://media.istockphoto.com/id/1283681886/photo/little-boy-riding-toy-car-in-the-garden.jpg?s=612x612&w=0&k=20&c=3B-qiRGCB1cUbUuAYZuSiVYf74hGrE3IOL2G3PWYCw4=",
+    title: "Engaging and Educational Toys for Children",
+    article:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus tempora officia fugiat sit nulla, rerum veritatis harum saepe reiciendis reprehenderit cumque esse quasi quidem laborum cum ipsam ullam vel eaque laudantium. Accusantium suscipit similique dolorum maxime eaque eos quas, reprehenderit excepturi culpa ex earum labore placeat tempore sunt odio ullam? Fuga, ut! In non qui reiciendis architecto molestiae cumque quae autem asperiores mollitia adipisci provident error hic voluptatem omnis pariatur, tempora commodi assumenda officia. Similique sunt veniam corporis quae dolorem.",
+  },
+  {
+    id: 3,
+    image:
+      "https://media.istockphoto.com/id/1042058916/photo/boy-playing-with-toy-car.jpg?s=612x612&w=0&k=20&c=EP4GkZ3PMbYcjWorkUjk6DItJTLJTM0l6PAdjVu5vi8=",
+    title: "Must-Have Children's Toys for Endless Fun and Learning",
+    article:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus tempora officia fugiat sit nulla, rerum veritatis harum saepe reiciendis reprehenderit cumque esse quasi quidem laborum cum ipsam ullam vel eaque laudantium. Accusantium suscipit similique dolorum maxime eaque eos quas, reprehenderit excepturi culpa ex earum labore placeat tempore sunt odio ullam? Fuga, ut! In non qui reiciendis architecto molestiae cumque quae autem asperiores mollitia adipisci provident error hic voluptatem omnis pariatur, tempora commodi assumenda officia. Similique sunt veniam corporis quae dolorem.",
+  },
+];
+
 const Articles = () => {
-    return (
-        <div className="rounded-lg">
-            <h4 className="text-xl md:text-3xl mb-5 font-extrabold">Read Our Articles</h4>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                <div className="card bg-white shadow-xl" data-aos="zoom-in">
-                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1162019476/photo/boy-and-dog-in-toy-racing-car.jpg?s=612x612&w=0&k=20&c=q4VZNxBRnpl9gHv3om30YhAKGOyKmTzPV0eSoHGCfGo=" alt="" data-aos-duration="1000" />
-                    <div className="card-body">
-                        <h2 className="card-title">
-                            Choosing the Right Toys for Children: A Comprehensive Guide
-                        </h2>
-                        <ol className="space-y-1">
-                            <li>1. Understanding the Importance of Play: In this section </li>
-                            <li>2. we will discuss the significance of play in a child's life and how it contributes to their overall development.</li>
-                            <li>3. We will explore the various types of play and highlight the benefits of each,</li>
-                            <li>4. emphasizing the role of toys in facilitating different forms of play. Every child has unique needs and interests based on their age and developmental stage. </li>
-                        </ol>
-
-                        We will suggest suitable toys that cater to their cognitive, physical, and emotional needs.
-                    </div>
-                </div>
-                <div className="card bg-white shadow-xl" data-aos="zoom-in">
-                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1283681886/photo/little-boy-riding-toy-car-in-the-garden.jpg?s=612x612&w=0&k=20&c=3B-qiRGCB1cUbUuAYZuSiVYf74hGrE3IOL2G3PWYCw4=" alt="" data-aos-duration="1000" />
-                    <div className="card-body">
-                        <h2 className="card-title">
-                            Engaging and Educational Toys for Children
-                        </h2>
-                        <h5>Introduction:
-                            Toys play a crucial role in a child's development, providing them with opportunities to learn and grow while having fun.,</h5>
-                        <ol className="space-y-1">
-                            <li> Building Blocks:
-                                Building blocks are timeless toys that foster creativity and spatial awareness. They help children develop fine motor skills, problem-solving abilities, and logical thinking. </li>
-                        </ol>
-
-                        Conclusion:
-                        The toys mentioned above offer a perfect blend of entertainment and education, ensuring that children have a fulfilling and enriching playtime experience.
-                    </div>
-                </div>
-                <div className="card bg-white shadow-xl" data-aos="zoom-in">
-                    <img className="rounded-md max-h-full max-w-auto m-auto" src="https://media.istockphoto.com/id/1042058916/photo/boy-playing-with-toy-car.jpg?s=612x612&w=0&k=20&c=EP4GkZ3PMbYcjWorkUjk6DItJTLJTM0l6PAdjVu5vi8=" alt="" data-aos-duration="1000" />
-                    <div className="card-body">
-                        <h2 className="card-title">
-                            Must-Have Children's Toys for Endless Fun and Learning
-                        </h2>
-                        <h6>Introduction:
-                            Children's toys are more than just playthings; they are powerful tools that foster imagination.</h6>
-                        <ol className="space-y-1">
-                            <li>1.LEGO Sets:
-                                LEGO sets have been captivating young minds for decades. problem-solving skills</li>
-                            <li>2.Building Blocks:
-                                In addition to LEGO sets, and problem-solving abilities. </li>
-                            <li>3. Art Supplies:
-                                Encouraging artistic expression is crucial for children's development.</li>
-                        </ol>
-
-                        Conclusion:
-                        Choosing the right toys for children can contribute significantly to their development and enjoyment.
-                    </div>
-                </div>
-            </div>
+    const [articleCount,setArticleCount]=useState(1);
+    const displayArticle=articles[articleCount-1];
+  return (
+    <div className="mt-8 sm:mt-12">
+      <h4 className="text-center text-xl md:text-3xl mb-5 font-semibold">
+        Read Our Articles
+      </h4>
+        <div key={displayArticle?.id} className="grid sm:grid-cols-2 items-center gap-6">
+          <img
+            className="max-h-full max-w-auto m-auto"
+            src={displayArticle?.image}
+            alt=""
+            // data-aos-duration="1000"
+          />
+          <div>
+            <h2 className="text-2xl sm:text-4xl pb-3 mb-4 font-semibold border-b">{displayArticle?.title}</h2>
+            <p className="text-lg mb-4">{displayArticle?.article.slice(0,200)}</p>
+            <Link to="/" className="flex items-center gap-1 hover:gap-[6px] duration-200 uppercase font-semibold cursor-pointer">see more <Icon icon="heroicons-outline:arrow-right" /></Link>
+          </div>
         </div>
-    );
+      <div className="flex justify-center gap-1 mt-3">{articles?.map(item=><span key={item.id} onClick={()=>setArticleCount(item?.id)} className={`w-full cursor-pointer h-2 rounded ${articleCount===item?.id?"bg-[#f3bd98]":"bg-[#cee5ec]"}`}></span>)}</div>
+    </div>
+  );
 };
 
 export default Articles;

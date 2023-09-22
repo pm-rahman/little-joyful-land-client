@@ -2,11 +2,12 @@ import Title from "../../../Components/Title/Title";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Gallery from "../Gallery/Gallery";
-import HighlightProduct from "../highlightProduct/HighlightProduct";
 import Articles from "../Articles/Articles";
 import Aos from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
+import AboutUs from "../AboutUs/AboutUs";
+import GetNews from "../GetNews/GetNews";
 
 const Home = () => {
   useEffect(() => {
@@ -20,15 +21,14 @@ const Home = () => {
 
   Title("Home");
   return (
-    <div className="space-y-10">
+    <>
       <Banner />
-      <Gallery />
       <Category />
-      {/* <div data-aos="fade-right"> */}
-      {/* </div> */}
-      <HighlightProduct />
+      <Gallery />
+      <AboutUs/>
       <Articles />
-    </div>
+      <GetNews/>
+    </>
   );
 };
 

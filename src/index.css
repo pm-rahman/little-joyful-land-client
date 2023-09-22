@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --primary-color: #8b9aac;
+    --primary-color: #cee5ec;
     --second-color: #f3bd98;
     --third-color: #cee5ec;
     --text-color: #535456;
@@ -11,13 +11,29 @@
 
 
 * {
-    font-family: Kalam, sans-serif;
+    font-family: Kalam !important;
 }
-
+h1,h2,h3,h4.h5,h6{
+    font-family: Raleway,sans-serif;
+}
 p,
 span,
 a {
     font-family: 'Kanit', sans-serif;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    border-bottom:2px solid #cee5ec
+
+    ;
+}
+/* active-Category */
+.active-Category{
+    background-color: var(--third-color) !important;
+}
+/* exclusive-cart */
+.exclusive-cart:hover .exclusive-btn{
+    display: block;
 }
 
 /* container */
@@ -51,6 +67,12 @@ a {
 }
 
 @media screen and (max-width:500px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width:350px) {
     .container {
         padding-left: 5px;
         padding-right: 5px;

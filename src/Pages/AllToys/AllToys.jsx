@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLoaderData } from "react-router-dom";
 import Title from "../../Components/Title/Title";
+import Button from "../../Components/Button/Button";
 
 const AllToys = () => {
     const totalToy = useLoaderData()
@@ -37,9 +38,9 @@ const AllToys = () => {
             <form className="mb-8" onSubmit={handleSubmit(onSubmit)}>
                 <div className="input-group justify-center">
                     <input type="text" {...register("search", { required: true })} placeholder="Search...." className="input w-1/3 input-bordered" />
-                    <button type="submit" className="btn bg-blue-500 hover:bg-[#f3bd98] border-0">
+                    <Button type="submit" size="small" >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                    </button>
+                    </Button>
                 </div>
                 {errors.exampleRequired && <span>This field is required</span>}
             </form>
@@ -65,7 +66,7 @@ const AllToys = () => {
                         <td>{toy.subCategory}</td>
                         <td>${toy.price}</td>
                         <td>{toy.quantity}</td>
-                        <td><Link to={`/toy-details/${toy._id}`} className="btn my-2 bg-blue-500 hover:bg-[#f3bd98] border-0">Details</Link></td>
+                        <td><Link to={`/toy-details/${toy._id}`}><Button size="small">Details</Button></Link></td>
                     </tr>
                     )}
                 </tbody>
@@ -74,13 +75,13 @@ const AllToys = () => {
                 {
                     pageNumber.map(number => <button
                         key={number}
-                        className={`px-4 py-2 rounded  ${currentPage === number ? 'bg-blue-500 text-white' : 'bg-slate-50'}`}
+                        className={`px-4 py-2 rounded  ${currentPage === number ? 'bg-[#f3bd98] text-white' : 'bg-slate-50'}`}
                         onClick={() => setCurrentPage(number)}
                     >{number}</button>)
                 }
                 <div className="flex px-3 rounded gap-2 items-center bg-slate-50">
-                    <h5 className="">per page</h5>
-                    <select className="bg-slate-50" defaultValue={toyPerPage} onClick={handlePerPageChange}>
+                    <h5 >per page</h5>
+                    <select className="bg-slate-50 cursor-pointer" defaultValue={toyPerPage} onClick={handlePerPageChange}>
                         <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="20">20</option>
