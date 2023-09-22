@@ -81,8 +81,8 @@ const MyToy = () => {
                         <td>${toy.price}</td>
                         <td>{toy.quantity}</td>
                         <td className="flex gap-2">
-                            <Link to={`/update/${toy._id}`} className="btn my-2 bg-blue-500 hover:bg-[#f3bd98] border-0"><Icon icon="fa-regular:edit" /></Link>
-                            <button onClick={() => deleteItemHandler(toy._id)} className="btn my-2 bg-blue-500 hover:bg-[#f3bd98] border-0"><Icon icon="fa-regular:trash-alt" /></button>
+                            <Link to={`/update/${toy._id}`} className="p-3 bg-[#f3bd98] text-black hover:text-black hover:bg-[#cee5ec]"><Icon icon="fa-regular:edit" /></Link>
+                            <button onClick={() => deleteItemHandler(toy._id)} className="p-3 bg-[#cee5ec] text-black hover:text-black hover:bg-[#f3bd98]"><Icon icon="fa-regular:trash-alt" /></button>
                         </td>
                     </tr>
                     )}
