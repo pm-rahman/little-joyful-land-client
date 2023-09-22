@@ -117,7 +117,7 @@ const AddToy = () => {
                     </label>
                 </div>
                 {errors.exampleRequired && <span className="text-red-500 font-semibold">This field is required</span>}
-                <input className="btn btn-block bg-blue-500 border-0 hover:bg-blue-600 col-span-3" type="submit" />
+                <input className="btn btn-block bg-blue-500 border-0 hover:bg-[#f3bd98] col-span-3" type="submit" />
             </form>
         </div>
     );

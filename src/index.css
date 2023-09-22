@@ -2,9 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    font-family: 'Wix Madefor Text', sans-serif;
+:root {
+    --primary-color: #8b9aac;
+    --second-color: #f3bd98;
+    --third-color: #cee5ec;
+    --text-color: #535456;
 }
-p,span,a{
+
+
+* {
+    font-family: Kalam, sans-serif;
+}
+
+p,
+span,
+a {
     font-family: 'Kanit', sans-serif;
+}
+
+/* container */
+.container {
+    max-width: 1440px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width:1000px) {
+    .container {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }

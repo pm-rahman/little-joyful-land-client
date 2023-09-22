@@ -32,7 +32,7 @@ const Category = () => {
                                         <div className="badge badge-secondary">{toy.rating}</div>
                                     </h2>
                                     <p>${toy.price}</p>
-                                    <Link to={`/toy-details/${toy._id}`} className="btn bg-blue-600 hover:bg-blue-700 border-0">View Details</Link>
+                                    <Link to={`/toy-details/${toy._id}`} className="btn bg-[#f3bd98] hover:bg-blue-700 border-0">View Details</Link>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ const Category = () => {
                                         <div className="badge badge-secondary">{toy.rating}</div>
                                     </h2>
                                     <p>${toy.price}</p>
-                                    <Link to={`/toy-details/${toy._id}`} className="btn bg-blue-600 hover:bg-blue-700 border-0">View Details</Link>
+                                    <Link to={`/toy-details/${toy._id}`} className="btn bg-[#f3bd98] hover:bg-blue-700 border-0">View Details</Link>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ const Category = () => {
                                         <div className="badge badge-secondary">{toy.rating}</div>
                                     </h2>
                                     <p>${toy.price}</p>
-                                    <Link to={`/toy-details/${toy._id}`} className="btn bg-blue-600 hover:bg-blue-700 border-0">View Details</Link>
+                                    <Link to={`/toy-details/${toy._id}`} className="btn bg-[#f3bd98] hover:bg-blue-700 border-0">View Details</Link>
                                 </div>
                             </div>
                         </div>

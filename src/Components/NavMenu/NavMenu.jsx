@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import ActiveLink from "../ActiveLink/ActiveLink";
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 
 const NavMenu = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -22,8 +23,9 @@ const NavMenu = () => {
         <li><ActiveLink to='/blogs'>Blogs</ActiveLink></li>
     </>
     return (
-        <div className="navbar px-0 pb-0 bg-white pt-5">
-            <div className="">
+        <div 
+        className="container navbar sticky z-50 top-0 py-4 shadow-md bg-white">
+            <div>
                 <div className="dropdown">
                     <label tabIndex={0} className="btn pl-0 btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -32,7 +34,7 @@ const NavMenu = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-lg"><img className="h-12" src="https://i.ibb.co/9bHGqtG/main-logo.png" alt="" /> <span className="hidden sm:block">Little Joyful Land</span></Link>
+                <Link to="/" className="btn btn-ghost px-0 normal-case text-lg"><span className="hidden sm:block">Little Joyful Land</span></Link>
             </div>
             <div className="ml-auto w-fit hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold">
@@ -42,9 +44,9 @@ const NavMenu = () => {
             <div className="ml-auto lg:ml-5 gap-3">
                 {user
                     ? <><a className="font-semibold">{user && user?.photoURL ? <img title={user?.displayName} className="h-11 w-11 rounded-full" src={user?.photoURL} alt="" /> : ''}</a>
-                        <a onClick={logOutHandler} className="btn text-xs md:text-base bg-blue-500 hover:bg-blue-600 border-0">Log Out</a>
+                        <Button onClick={logOutHandler}>Log Out</Button>
                     </>
-                    : <Link to='/login' className="btn bg-blue-500 hover:bg-blue-600 border-0">Login</Link>
+                    : <Link to='/login'><Button>Login/Register</Button></Link>
                 }
             </div>
         </div>
