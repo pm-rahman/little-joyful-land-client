@@ -97,8 +97,8 @@ const Register = () => {
 
                 {errors.exampleRequired && <span className="text-red-500">This field is required</span>}
                 <p className="font-semibold text-red-500">{error}</p>
-                <input type="submit" value="Register" className="btn btn-block border-none rounded-md bg-blue-600 hover:bg-blue-600" />
-                <p>I already have an account <Link onClick={loginButtonHandler} className="text-blue-600 font-semibold underline">Login</Link> </p>
+                <input type="submit" value="Register" className="btn btn-block border-none rounded-md bg-[#f3bd98] hover:bg-[#f3bd98]" />
+                <p>I already have an account <Link onClick={loginButtonHandler} className="text-[#f3bd98] font-semibold underline">Login</Link> </p>
             </form>
             <button onClick={googleUserHandler} className="mt-4 bg-blue-500 mx-auto rounded-md py-3 px-6 flex gap-1 items-center justify-center text-white"><span className="font-semibold text-md">Google</span><Icon className="text-sm" icon="fa-brands:google" /></button>
         </div>
